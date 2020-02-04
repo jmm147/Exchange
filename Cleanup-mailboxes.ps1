@@ -173,7 +173,7 @@ $failedusertable = $failedusertable | Sort-Object "SAM Account Name"
 #Creation of the body for the email
 $body = "<center><h1>User Account and Mailbox Deletion Report</h1></center>" 
 $body += "<center>By  $sig</a></center>"
-$body += "<h4>The following user(s) were found in Active Directory</h4>" 
+$body += "<h4>The following user(s) were found and removed from Active Directory</h4>" 
 $body += $validusertable | ConvertTo-Html -Head $css 
 
 $body += "<h4>The following user(s) were not found in Active Directory</h4>" 
